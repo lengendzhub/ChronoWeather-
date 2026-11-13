@@ -1,0 +1,263 @@
+
+================================================================================
+1. FILE, SHAPE, MEMORY
+================================================================================
+Generated: 2026-11-13 20:12:23
+File: D:\PMA\pma-data-analytics\data\GlobalWeatherRepository.csv
+File size: 42.98 MB
+SHA-256: be39946635a451996421eaaacfba0d0b5727c6a599f3a57566f79ec2ac8ecb56
+Rows: 170,928 | Columns: 41
+Memory (deep): 158.46 MB
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 170928 entries, 0 to 170927
+Data columns (total 41 columns):
+ #   Column                        Non-Null Count   Dtype  
+---  ------                        --------------   -----  
+ 0   country                       170928 non-null  object 
+ 1   location_name                 170928 non-null  object 
+ 2   latitude                      170928 non-null  float64
+ 3   longitude                     170928 non-null  float64
+ 4   timezone                      170928 non-null  object 
+ 5   last_updated_epoch            170928 non-null  int64  
+ 6   last_updated                  170928 non-null  object 
+ 7   temperature_celsius           170928 non-null  float64
+ 8   temperature_fahrenheit        170928 non-null  float64
+ 9   condition_text                170928 non-null  object 
+ 10  wind_mph                      170928 non-null  float64
+ 11  wind_kph                      170928 non-null  float64
+ 12  wind_degree                   170928 non-null  int64  
+ 13  wind_direction                170928 non-null  object 
+ 14  pressure_mb                   170928 non-null  float64
+ 15  pressure_in                   170928 non-null  float64
+ 16  precip_mm                     170928 non-null  float64
+ 17  precip_in                     170928 non-null  float64
+ 18  humidity                      170928 non-null  int64  
+ 19  cloud                         170928 non-null  int64  
+ 20  feels_like_celsius            170928 non-null  float64
+ 21  feels_like_fahrenheit         170928 non-null  float64
+ 22  visibility_km                 170928 non-null  float64
+ 23  visibility_miles              170928 non-null  float64
+ 24  uv_index                      170928 non-null  float64
+ 25  gust_mph                      170928 non-null  float64
+ 26  gust_kph                      170928 non-null  float64
+ 27  air_quality_Carbon_Monoxide   170928 non-null  float64
+ 28  air_quality_Ozone             170928 non-null  float64
+ 29  air_quality_Nitrogen_dioxide  170928 non-null  float64
+ 30  air_quality_Sulphur_dioxide   170928 non-null  float64
+ 31  air_quality_PM2.5             170928 non-null  float64
+ 32  air_quality_PM10              170928 non-null  float64
+ 33  air_quality_us-epa-index      170928 non-null  int64  
+ 34  air_quality_gb-defra-index    170928 non-null  int64  
+ 35  sunrise                       170928 non-null  object 
+ 36  sunset                        170928 non-null  object 
+ 37  moonrise                      170928 non-null  object 
+ 38  moonset                       170928 non-null  object 
+ 39  moon_phase                    170928 non-null  object 
+ 40  moon_illumination             170928 non-null  int64  
+dtypes: float64(23), int64(7), object(11)
+memory usage: 53.5+ MB
+
+================================================================================
+2. COLUMN OVERVIEW
+================================================================================
+                      column   dtype  non_null  nulls  null_%  n_unique          example
+                     country  object    170928      0     0.0       211      Afghanistan
+               location_name  object    170928      0     0.0       268            Kabul
+                    latitude float64    170928      0     0.0       422            34.52
+                   longitude float64    170928      0     0.0       428            69.18
+                    timezone  object    170928      0     0.0       201       Asia/Kabul
+          last_updated_epoch   int64    170928      0     0.0      1575       1715849100
+                last_updated  object    170928      0     0.0     28420 2024-05-16 13:15
+         temperature_celsius float64    170928      0     0.0       709             26.6
+      temperature_fahrenheit float64    170928      0     0.0      1180             79.8
+              condition_text  object    170928      0     0.0        58    Partly Cloudy
+                    wind_mph float64    170928      0     0.0       189              8.3
+                    wind_kph float64    170928      0     0.0       189             13.3
+                 wind_degree   int64    170928      0     0.0       360              338
+              wind_direction  object    170928      0     0.0        16              NNW
+                 pressure_mb float64    170928      0     0.0       130           1012.0
+                 pressure_in float64    170928      0     0.0       269            29.89
+                   precip_mm float64    170928      0     0.0       708              0.0
+                   precip_in float64    170928      0     0.0        83              0.0
+                    humidity   int64    170928      0     0.0        99               24
+                       cloud   int64    170928      0     0.0       101               30
+          feels_like_celsius float64    170928      0     0.0       822             25.3
+       feels_like_fahrenheit float64    170928      0     0.0      1432             77.5
+               visibility_km float64    170928      0     0.0       116             10.0
+            visibility_miles float64    170928      0     0.0        16              6.0
+                    uv_index float64    170928      0     0.0       163              7.0
+                    gust_mph float64    170928      0     0.0       525              9.5
+                    gust_kph float64    170928      0     0.0       798             15.3
+ air_quality_Carbon_Monoxide float64    170928      0     0.0      7901            277.0
+           air_quality_Ozone float64    170928      0     0.0       690            103.0
+air_quality_Nitrogen_dioxide float64    170928      0     0.0      3544              1.1
+ air_quality_Sulphur_dioxide float64    170928      0     0.0      3450              0.2
+           air_quality_PM2.5 float64    170928      0     0.0      5543              8.4
+            air_quality_PM10 float64    170928      0     0.0      8167             26.6
+    air_quality_us-epa-index   int64    170928      0     0.0         6                1
+  air_quality_gb-defra-index   int64    170928      0     0.0        10                1
+                     sunrise  object    170928      0     0.0       522         04:50 AM
+                      sunset  object    170928      0     0.0       570         06:50 PM
+                    moonrise  object    170928      0     0.0      1445         12:12 PM
+                     moonset  object    170928      0     0.0      1445         01:11 AM
+                  moon_phase  object    170928      0     0.0         8   Waxing Gibbous
+           moon_illumination   int64    170928      0     0.0       101               55
+
+================================================================================
+3. FIRST 5 ROWS (transposed)
+================================================================================
+                                             0                 1                 2                 3                 4
+country                            Afghanistan           Albania           Algeria           Andorra            Angola
+location_name                            Kabul            Tirana           Algiers  Andorra La Vella            Luanda
+latitude                                 34.52             41.33             36.76              42.5             -8.84
+longitude                                69.18             19.82              3.05              1.52             13.23
+timezone                            Asia/Kabul     Europe/Tirane    Africa/Algiers    Europe/Andorra     Africa/Luanda
+last_updated_epoch                  1715849100        1715849100        1715849100        1715849100        1715849100
+last_updated                  2024-05-16 13:15  2024-05-16 10:45  2024-05-16 09:45  2024-05-16 10:45  2024-05-16 09:45
+temperature_celsius                       26.6              19.0              23.0               6.3              26.0
+temperature_fahrenheit                    79.8              66.2              73.4              43.3              78.8
+condition_text                   Partly Cloudy     Partly cloudy             Sunny     Light drizzle     Partly cloudy
+wind_mph                                   8.3               6.9               9.4               7.4               8.1
+wind_kph                                  13.3              11.2              15.1              11.9              13.0
+wind_degree                                338               320               280               215               150
+wind_direction                             NNW                NW                 W                SW               SSE
+pressure_mb                             1012.0            1012.0            1011.0            1007.0            1011.0
+pressure_in                              29.89             29.88             29.85             29.75             29.85
+precip_mm                                  0.0               0.1               0.0               0.3               0.0
+precip_in                                  0.0               0.0               0.0              0.01               0.0
+humidity                                    24                94                29                61                89
+cloud                                       30                75                 0               100                50
+feels_like_celsius                        25.3              19.0              24.6               3.8              28.7
+feels_like_fahrenheit                     77.5              66.2              76.4              38.9              83.6
+visibility_km                             10.0              10.0              10.0               2.0              10.0
+visibility_miles                           6.0               6.0               6.0               1.0               6.0
+uv_index                                   7.0               5.0               5.0               2.0               8.0
+gust_mph                                   9.5              11.4              13.9               8.5              12.5
+gust_kph                                  15.3              18.4              22.3              13.7              20.2
+air_quality_Carbon_Monoxide              277.0             193.6             540.7             170.2            2964.0
+air_quality_Ozone                        103.0              97.3              12.2              64.4              19.0
+air_quality_Nitrogen_dioxide               1.1               0.9              65.1               1.6              72.7
+air_quality_Sulphur_dioxide                0.2               0.1              13.4               0.2              31.5
+air_quality_PM2.5                          8.4               1.1              10.4               0.7             183.4
+air_quality_PM10                          26.6               2.0              18.4               0.9             262.3
+air_quality_us-epa-index                     1                 1                 1                 1                 5
+air_quality_gb-defra-index                   1                 1                 1                 1                10
+sunrise                               04:50 AM          05:21 AM          05:40 AM          06:31 AM          06:12 AM
+sunset                                06:50 PM          07:54 PM          07:50 PM          09:11 PM          05:55 PM
+moonrise                              12:12 PM          12:58 PM          01:15 PM          02:12 PM          01:17 PM
+moonset                               01:11 AM          02:14 AM          02:14 AM          03:31 AM          12:38 AM
+moon_phase                      Waxing Gibbous    Waxing Gibbous    Waxing Gibbous    Waxing Gibbous    Waxing Gibbous
+moon_illumination                           55                55                55                55                55
+
+================================================================================
+4. MISSING VALUES
+================================================================================
+No missing values found.
+Rows with at least one missing value: 0
+
+================================================================================
+5. DUPLICATES
+================================================================================
+Chosen time column: 'last_updated'
+Chosen entity columns: ['country', 'location_name']
+Unique country+city groups: 286
+Unique city names: 268
+Note: many rows sharing one timestamp is expected when each city has one reading; the entity+timestamp key is the important duplicate check.
+exact_duplicate_rows: 0
+duplicate_timestamp_rows: 142,508
+duplicate_entity_timestamp_rows: 1
+
+================================================================================
+6. TIME COLUMN CANDIDATES
+================================================================================
+      column  dtype  parse_%  n_unique                 min                 max  span_days
+last_updated object    100.0     28420 2024-05-16 01:45:00 2026-10-13 18:45:00        880
+
+================================================================================
+7. TIME COVERAGE DETAILS
+================================================================================
+Time column: last_updated
+Parsed values: 170,928 / 170,928
+Range: 2024-05-16 01:45:00  ->  2026-10-13 18:45:00
+Span: 880 days
+Unique timestamps: 28,420
+Rows per calendar day: min=1, median=195, max=378, days=880
+Calendar days with zero rows: 1
+Most common timestamps: 2026-01-02 08:15:00 (45 rows), 2026-01-03 08:00:00 (45 rows), 2025-12-26 08:15:00 (45 rows), 2026-01-05 08:15:00 (45 rows), 2026-04-22 08:30:00 (45 rows)
+Cadence for 'Kabul' (878 rows): 1 d x 395, 0.99 d x 214, 1.01 d x 172
+Cadence for 'Tirana' (877 rows): 1 d x 381, 0.99 d x 212, 1.01 d x 173
+Cadence for 'Algiers' (876 rows): 1 d x 395, 0.99 d x 201, 1.01 d x 163
+
+================================================================================
+8. LOCATION COLUMN CANDIDATES
+================================================================================
+     role        column  non_null  n_unique    min     max                                   top_values
+     city location_name    170928       268                 Sanaa, Tashkent, Bujumbura, Kyiv, N'djamena
+  country       country    170928       211                Bulgaria, Indonesia, Thailand, Turkey, Sudan
+ latitude      latitude    170928       422  -41.3    65.3                                             
+longitude     longitude    170928       428 -175.2  179.22                                             
+
+================================================================================
+9. NUMERIC SUMMARY
+================================================================================
+                                 count          mean           std           min            1%           25%           50%           75%           99%           max  negative   zeros
+latitude                      170928.0  1.928300e+01  2.437300e+01 -4.130000e+01 -3.528000e+01  4.050000e+00  1.725000e+01  4.040000e+01  6.017600e+01  6.530000e+01     37139       0
+longitude                     170928.0  2.180500e+01  6.576700e+01 -1.752000e+02 -1.717300e+02 -6.836000e+00  2.143300e+01  4.988200e+01  1.784170e+02  1.792200e+02     47801       0
+last_updated_epoch            170928.0  1.753891e+09  2.196145e+07  1.715849e+09  1.716473e+09  1.734949e+09  1.753863e+09  1.772865e+09  1.791179e+09  1.791870e+09         0       0
+temperature_celsius           170928.0  2.144500e+01  9.272000e+00 -2.980000e+01 -3.900000e+00  1.620000e+01  2.360000e+01  2.770000e+01  3.920000e+01  7.930000e+01      3718     111
+temperature_fahrenheit        170928.0  7.060300e+01  1.668900e+01 -2.160000e+01  2.500000e+01  6.110000e+01  7.440000e+01  8.180000e+01  1.025000e+02  1.747000e+02       187       9
+wind_mph                      170928.0  7.872000e+00  6.827000e+00  2.200000e+00  2.200000e+00  3.800000e+00  6.500000e+00  1.070000e+01  2.300000e+01  1.841200e+03         0       0
+wind_kph                      170928.0  1.267300e+01  1.098300e+01  3.600000e+00  3.600000e+00  6.100000e+00  1.040000e+01  1.730000e+01  3.710000e+01  2.963200e+03         0       0
+wind_degree                   170928.0  1.701470e+02  1.032630e+02  1.000000e+00  6.000000e+00  8.100000e+01  1.640000e+02  2.560000e+02  3.560000e+02  3.600000e+02         0       0
+pressure_mb                   170928.0  1.014037e+03  9.872000e+00  7.710000e+02  9.960000e+02  1.010000e+03  1.014000e+03  1.018000e+03  1.031000e+03  3.006000e+03         0       0
+pressure_in                   170928.0  2.994400e+01  2.910000e-01  2.276000e+01  2.941000e+01  2.983000e+01  2.993000e+01  3.006000e+01  3.046000e+01  8.877000e+01         0       0
+precip_mm                     170928.0  1.320000e-01  6.090000e-01  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  2.000000e-02  2.120000e+00  7.452000e+01         0  114954
+precip_in                     170928.0  5.000000e-03  2.400000e-02  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  8.000000e-02  2.930000e+00         0  145298
+humidity                      170928.0  6.706100e+01  2.339500e+01  2.000000e+00  1.100000e+01  5.200000e+01  7.200000e+01  8.500000e+01  1.000000e+02  1.000000e+02         0       0
+cloud                         170928.0  4.044500e+01  3.497800e+01  0.000000e+00  0.000000e+00  0.000000e+00  3.100000e+01  7.500000e+01  1.000000e+02  1.000000e+02         0   43063
+feels_like_celsius            170928.0  2.215700e+01  1.115900e+01 -4.000000e+01 -8.400000e+00  1.580000e+01  2.490000e+01  2.970000e+01  4.310000e+01  8.130000e+01      7026     115
+feels_like_fahrenheit         170928.0  7.187900e+01  2.008300e+01 -4.000000e+01  1.690000e+01  6.040000e+01  7.690000e+01  8.550000e+01  1.096000e+02  1.783000e+02       492       4
+visibility_km                 170928.0  9.499000e+00  2.650000e+00  0.000000e+00  4.000000e-01  1.000000e+01  1.000000e+01  1.000000e+01  2.400000e+01  3.200000e+01         0    1357
+visibility_miles              170928.0  5.618000e+00  1.654000e+00  0.000000e+00  0.000000e+00  6.000000e+00  6.000000e+00  6.000000e+00  1.400000e+01  1.900000e+01         0    2654
+uv_index                      170928.0  3.049000e+00  3.485000e+00  0.000000e+00  0.000000e+00  0.000000e+00  1.400000e+00  5.800000e+00  1.270000e+01  1.630000e+01         0   45721
+gust_mph                      170928.0  1.126700e+01  8.270000e+00  2.200000e+00  2.400000e+00  6.300000e+00  9.400000e+00  1.500000e+01  3.260000e+01  1.845700e+03         0       0
+gust_kph                      170928.0  1.813500e+01  1.331000e+01  3.600000e+00  3.800000e+00  1.010000e+01  1.520000e+01  2.410000e+01  5.240000e+01  2.970400e+03         0       0
+air_quality_Carbon_Monoxide   170928.0  4.149870e+02  6.931080e+02 -9.999000e+03  7.585000e+01  1.748120e+02  2.645500e+02  4.208500e+02  2.854051e+03  3.887940e+04         1       0
+air_quality_Ozone             170928.0  5.779700e+01  3.137700e+01  0.000000e+00  1.200000e+00  3.800000e+01  5.400000e+01  7.300000e+01  1.600000e+02  4.807000e+02         0     910
+air_quality_Nitrogen_dioxide  170928.0  1.387600e+01  2.206900e+01  0.000000e+00  0.000000e+00  1.700000e+00  5.450000e+00  1.580000e+01  1.080400e+02  4.277000e+02         0    3232
+air_quality_Sulphur_dioxide   170928.0  9.501000e+00  3.232600e+01 -9.999000e+03  0.000000e+00  1.050000e+00  2.300000e+00  7.500000e+00  1.067490e+02  5.213300e+02         1    1772
+air_quality_PM2.5             170928.0  2.248500e+01  3.419100e+01  1.000000e-01  8.000000e-01  6.700000e+00  1.295000e+01  2.560000e+01  1.503900e+02  1.614100e+03         0       0
+air_quality_PM10              170928.0  4.498300e+01  1.394070e+02 -1.848150e+03  1.200000e+00  9.500000e+00  1.850000e+01  3.829500e+01  4.497350e+02  6.037290e+03         2       0
+air_quality_us-epa-index      170928.0  1.638000e+00  9.080000e-01  1.000000e+00  1.000000e+00  1.000000e+00  1.000000e+00  2.000000e+00  4.730000e+00  6.000000e+00         0       0
+air_quality_gb-defra-index    170928.0  2.465000e+00  2.345000e+00  1.000000e+00  1.000000e+00  1.000000e+00  2.000000e+00  3.000000e+00  1.000000e+01  1.000000e+01         0       0
+moon_illumination             170928.0  5.005800e+01  3.513500e+01  0.000000e+00  0.000000e+00  1.500000e+01  5.000000e+01  8.500000e+01  1.000000e+02  1.000000e+02         0    6978
+
+================================================================================
+10. CONSTANT COLUMNS
+================================================================================
+None.
+
+================================================================================
+11. UNIT-DUPLICATE / NEAR-DUPLICATE NUMERIC PAIRS
+================================================================================
+           column_a               column_b      n        r    slope  intercept                                     note
+temperature_celsius temperature_fahrenheit 170928 0.999997 1.799981    32.0019 F = 1.8 * C + 32 (Celsius vs Fahrenheit)
+ feels_like_celsius  feels_like_fahrenheit 170928 0.999996 1.799814    31.9997 F = 1.8 * C + 32 (Celsius vs Fahrenheit)
+           gust_mph               gust_kph 170928 0.999992 1.609317     0.0022                    km = 1.609344 * miles
+           wind_mph               wind_kph 170928 0.999987 1.608787     0.0082                    km = 1.609344 * miles
+
+================================================================================
+12. PLAUSIBILITY FLAGS (heuristic)
+================================================================================
+                     column                            rule  bad_rows              examples
+        temperature_celsius   temperature outside -90..60 C         1                  79.3
+     temperature_fahrenheit temperature outside -130..140 F         1                 174.7
+                pressure_mb   pressure outside 800-1100 hPa         5 3006.0, 3000.0, 771.0
+                pressure_in     pressure outside 20-35 inHg         2          88.77, 88.59
+air_quality_Carbon_Monoxide      negative air-quality value         1               -9999.0
+air_quality_Sulphur_dioxide      negative air-quality value         1               -9999.0
+           air_quality_PM10      negative air-quality value         2     -1848.15, -998.15
+
+================================================================================
+END OF PROFILE
+================================================================================

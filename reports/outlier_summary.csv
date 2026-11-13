@@ -1,0 +1,21 @@
+column,n,q1,q3,iqr_low,iqr_high,iqr_outliers,z3_outliers,min,max,note
+temperature_celsius,170926,16.2,27.7,-1.0500000000000007,44.95,3124,1156,-29.8,49.2,Keep; diagnostic only
+feels_like_celsius,170926,15.8,29.7,-5.049999999999997,50.55,2890,1119,-40.0,51.2,Keep; diagnostic only
+wind_kph,170926,6.1,17.3,-10.700000000000001,34.1,3221,1573,3.6,272.2,Keep; diagnostic only
+wind_degree,170927,81.0,256.0,-181.5,518.5,0,0,1.0,360.0,Keep; diagnostic only
+gust_kph,170926,10.1,24.1,-10.900000000000004,45.10000000000001,4493,1835,3.6,279.4,Keep; diagnostic only
+pressure_mb,170925,1010.0,1018.0,998.0,1030.0,4572,1247,771.0,1080.0,Keep; diagnostic only
+precip_mm,170927,0.0,0.02,-0.03,0.05,33887,2050,0.0,74.52,Keep; diagnostic only
+humidity,170927,52.0,85.0,2.5,134.5,2,0,2.0,100.0,Keep; diagnostic only
+cloud,170927,0.0,75.0,-112.5,187.5,0,0,0.0,100.0,Keep; diagnostic only
+visibility_km,170927,10.0,10.0,10.0,10.0,34808,5144,0.0,32.0,Keep; diagnostic only
+uv_index,170927,0.0,5.8,-8.7,14.5,325,936,0.0,16.3,Keep; diagnostic only
+moon_illumination,170927,15.0,85.0,-90.0,190.0,0,0,0.0,100.0,Keep; diagnostic only
+air_quality_Carbon_Monoxide,170926,174.85,420.85,-194.15000000000006,789.8500000000001,15064,2215,53.85,38879.398,Keep; diagnostic only
+air_quality_Ozone,170927,38.0,73.0,-14.5,125.5,5319,2182,0.0,480.7,Keep; diagnostic only
+air_quality_Nitrogen_dioxide,170927,1.7,15.8,-19.450000000000003,36.95,17526,4266,0.0,427.7,Keep; diagnostic only
+air_quality_Sulphur_dioxide,170926,1.05,7.5,-8.625,17.175,23638,4016,0.0,521.33,Keep; diagnostic only
+air_quality_PM2.5,170927,6.7,25.6,-21.650000000000002,53.95,14446,2651,0.1,1614.1,Keep; diagnostic only
+air_quality_PM10,170925,9.5,38.295,-33.6925,81.48750000000001,18185,1628,0.1,6037.29,Keep; diagnostic only
+air_quality_us_epa_index,170927,1.0,2.0,-0.5,3.5,10383,1710,1.0,6.0,Keep; diagnostic only
+air_quality_gb_defra_index,170927,1.0,3.0,-2.0,6.0,14446,8871,1.0,10.0,Keep; diagnostic only

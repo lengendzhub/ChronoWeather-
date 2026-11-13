@@ -1,0 +1,22 @@
+# Core data stack
+pandas==2.2.3
+numpy==2.2.4
+scipy==1.17.1
+
+# Visualisation
+matplotlib==3.11.2
+seaborn==0.13.2
+plotly==7.1.0
+
+# Modelling / time series
+scikit-learn==1.6.1
+statsmodels==0.15.0
+
+# Dataset download (public Kaggle dataset, cached outside the repo)
+kagglehub[pandas-datasets]==1.0.3
+
+# Notebook environment
+jupyterlab==4.6.6
+ipykernel==7.4.0
+nbformat==5.10.4
+nbconvert==7.16.6

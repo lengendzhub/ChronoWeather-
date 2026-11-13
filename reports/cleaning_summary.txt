@@ -1,0 +1,91 @@
+Phase B cleaning summary
+======================
+Generated: 2026-11-13 15:15:34
+
+Input and output
+----------------
+Rows in: 170,928 | columns in: 41
+Rows out: 170,927 | columns out: 48
+Exact duplicate rows: 0
+Duplicate country+city+timestamp rows removed: 1
+Null cells in raw file: 0
+Null cells in cleaned file: 10
+Time range (local): 2024-05-16 01:45:00 -> 2026-10-13 18:45:00
+Time range (UTC):   2024-05-16 08:45:00+00:00 -> 2026-10-13 05:45:00+00:00
+
+Entity and coverage rules
+-------------------------
+Country labels: 211 raw -> 191 cleaned
+City names: 268 raw -> 262 cleaned
+Country+city groups: 286 raw -> 269 cleaned -> 269 after dedupe
+Country alias rows changed: 5,144
+City alias rows changed: 1,187
+Rows after dedupe: 170,927
+Location tiers (rows): core=160285, partial=10007, sparse=635
+Location tiers (groups): core=183, partial=33, sparse=53
+Duplicate local city-day keys collapsed: 416 keys (416 extra rows)
+Daily city rows: 170,511
+Global core UTC dates: 879; usable (>= 150 cities): 875; cities/date min/median/max: 1/183.0/183
+
+Impossible values set to missing and flagged
+-------------------------------------------
+Temperature/feels-like impossible rows: 1 / 1
+Pressure outside (650.0, 1100.0) mb: 2
+Wind/gust above 500 kph: 1
+Extreme wind/gust above 200 kph (kept if < 500): 4 rows
+Negative air-quality rows/cells: 4 / 4
+Zero visibility rows (kept; mostly fog): 1,357
+
+Schema cleanup
+--------------
+Dropped redundant unit columns: temperature_fahrenheit, feels_like_fahrenheit, wind_mph, gust_mph, pressure_in, precip_in, visibility_miles
+Condition labels: 58 exact -> 57 after lowercase+capitalise
+Astronomy fields are retained as raw metadata and are not used as model features.
+
+Outlier analysis (diagnostic only; no weather extremes deleted)
+---------------------------------------------------------------
+Global IQR outliers by variable (see outlier_summary.csv):
+                      column      n  iqr_outliers  z3_outliers    min       max
+         temperature_celsius 170926          3124         1156 -29.80    49.200
+          feels_like_celsius 170926          2890         1119 -40.00    51.200
+                    wind_kph 170926          3221         1573   3.60   272.200
+                 wind_degree 170927             0            0   1.00   360.000
+                    gust_kph 170926          4493         1835   3.60   279.400
+                 pressure_mb 170925          4572         1247 771.00  1080.000
+                   precip_mm 170927         33887         2050   0.00    74.520
+                    humidity 170927             2            0   2.00   100.000
+                       cloud 170927             0            0   0.00   100.000
+               visibility_km 170927         34808         5144   0.00    32.000
+                    uv_index 170927           325          936   0.00    16.300
+           moon_illumination 170927             0            0   0.00   100.000
+ air_quality_Carbon_Monoxide 170926         15064         2215  53.85 38879.398
+           air_quality_Ozone 170927          5319         2182   0.00   480.700
+air_quality_Nitrogen_dioxide 170927         17526         4266   0.00   427.700
+ air_quality_Sulphur_dioxide 170926         23638         4016   0.00   521.330
+           air_quality_PM2.5 170927         14446         2651   0.10  1614.100
+            air_quality_PM10 170925         18185         1628   0.10  6037.290
+    air_quality_us_epa_index 170927         10383         1710   1.00     6.000
+  air_quality_gb_defra_index 170927         14446         8871   1.00    10.000
+
+Within-city temperature IQR outliers (core locations only): 1,708 / 160,285 rows (1.07%); 98 of 183 core cities have at least one.
+Within-city wind IQR outliers: 3,398 (2.12%); pressure: 2,155 (1.34%).
+These are kept: they may be real heatwaves/cold snaps and are useful signals for anomaly detection.
+IQR is not meaningful for zero-inflated precipitation or capped visibility; those counts are reported for transparency only.
+
+Scaling decision
+----------------
+The cleaned output is deliberately unscaled. Scale inside the model pipeline, fitting on the training period only.
+Use StandardScaler (or RobustScaler if retained outliers dominate) for linear, distance-based, and neural models. Tree models do not need scaling. Keep the target in degrees Celsius for interpretable MAE/RMSE.
+Scale statistics: scaling_summary.csv
+
+Output files
+------------
+Row-level cleaned data: D:\PMA\pma-data-analytics\data\processed\weather_clean_rows.csv.gz
+City-day data:          D:\PMA\pma-data-analytics\data\processed\weather_daily_city.csv.gz
+Global daily core data: D:\PMA\pma-data-analytics\data\processed\weather_daily_global_core.csv
+Global outliers:        D:\PMA\pma-data-analytics\reports\outlier_summary.csv
+City outliers:          D:\PMA\pma-data-analytics\reports\outlier_by_city_temperature.csv
+Scaling statistics:     D:\PMA\pma-data-analytics\reports\scaling_summary.csv
+Alias mapping:          D:\PMA\pma-data-analytics\reports\alias_mapping.csv
+
+This report contains actual counts from the executed run, not estimates.
